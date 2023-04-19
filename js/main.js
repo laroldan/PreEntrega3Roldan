@@ -43,16 +43,39 @@ let nuevo;
 let mesa = numMesa();
 
 //LISTA DE COMIDAS POR CONSOLA
+const infobox1 = document.getElementById("box1");
 
 const listado = document.querySelector("#listado");
 listado.addEventListener("click", () => {
-  console.log("◘ LISTADO DE PLATOS\tMESA:" + mesa);
+  console.log("◘ LISTADO DE PLATOS  MESA:" + mesa);
   console.log("--------------");
   productos.forEach((el) => {
     console.log(el.nombre + " $" + el.precio);
   });
   console.log("--------------");
-  alert("LISTA GENERADA EN CONSOLA\nF12 para visualizar.");
+  //alert("LISTA GENERADA EN CONSOLA\nF12 para visualizar.");
+
+  infobox1.innerHTML = `<p class="d-flex justify-content-center align-items-stretch">
+  LISTADO DE PLATOS  MESA:${mesa}<br>
+  --------------<br>
+  ${productos[0].nombre} $ ${productos[0].precio}<br>
+  ${productos[1].nombre} $ ${productos[1].precio}<br>
+  ${productos[2].nombre} $ ${productos[2].precio}<br>
+  ${productos[3].nombre} $ ${productos[3].precio}<br>
+  ${productos[4].nombre} $ ${productos[4].precio}<br>
+  ${productos[5].nombre} $ ${productos[5].precio}<br>
+  ${productos[6].nombre} $ ${productos[6].precio}<br>
+  ${productos[7].nombre} $ ${productos[7].precio}<br>
+  ${productos[8].nombre} $ ${productos[8].precio}<br>
+  ${productos[9].nombre} $ ${productos[9].precio}<br>
+  --------------<br>
+</p>`;
+
+  // infobox1.innerText = "LISTADO DE PLATOS\n" + productos[0].nombre;
+  // for (let i = 0; i < 10; i++) {
+  //   infobox1.innerText =
+  //     "\n" + productos[i].nombre + " $" + productos[i].precio + "\n";
+  // }
 });
 
 //EMPEZAR CON LA COMPRA
