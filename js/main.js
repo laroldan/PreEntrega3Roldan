@@ -177,9 +177,6 @@ carrito.addEventListener("click", () => {
     TOTAL DE LA COMPRA: $${totalCompra}
     </p>`;
 
-    // alert(
-    //   "Tu carrito de compra se encuentra en la consola\n\nPLATOS PEDIDOS\nDESCUENTO\nTOTAL DEL PEDIDO"
-    // );
     console.log(
       "\nGRACIAS POR VISITARNOS: " + nombre + " " + apellido + " MESA: " + mesa
     );
