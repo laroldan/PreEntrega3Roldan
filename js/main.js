@@ -53,9 +53,8 @@ listado.addEventListener("click", () => {
     console.log(el.nombre + " $" + el.precio);
   });
   console.log("--------------");
-  //alert("LISTA GENERADA EN CONSOLA\nF12 para visualizar.");
 
-  infobox1.innerHTML = `<p class="d-flex justify-content-center align-items-stretch">
+  infobox1.innerHTML = `<p class="d-flex flex-column justify-content-center align-items-center pt-3"">
   LISTADO DE PLATOS  MESA:${mesa}<br>
   --------------<br>
   ${productos[0].nombre} $ ${productos[0].precio}<br>
@@ -70,12 +69,6 @@ listado.addEventListener("click", () => {
   ${productos[9].nombre} $ ${productos[9].precio}<br>
   --------------<br>
 </p>`;
-
-  // infobox1.innerText = "LISTADO DE PLATOS\n" + productos[0].nombre;
-  // for (let i = 0; i < 10; i++) {
-  //   infobox1.innerText =
-  //     "\n" + productos[i].nombre + " $" + productos[i].precio + "\n";
-  // }
 });
 
 //EMPEZAR CON LA COMPRA
@@ -159,6 +152,7 @@ comenzar.addEventListener("click", () => {
 });
 
 //CARRITO POR CONSOLA
+const infobox2 = document.getElementById("box2");
 
 const carrito = document.querySelector("#carrito");
 carrito.addEventListener("click", () => {
@@ -176,9 +170,16 @@ carrito.addEventListener("click", () => {
     console.log("TOTAL DE LA COMPRA =\t$" + totalCompra);
     console.log("---------------------------------------");
 
-    alert(
-      "Tu carrito de compra se encuentra en la consola\n\nPLATOS PEDIDOS\nDESCUENTO\nTOTAL DEL PEDIDO"
-    );
+    infobox2.innerHTML = `<p class="d-flex flex-column justify-content-center align-items-center">
+    GRACIAS POR VISITARNOS: <strong>${nombre} ${apellido}</strong> MESA: ${mesa}<br>
+    EL DESCUENTO ES AUTOMATICO.<br>
+    --------------<br>
+    TOTAL DE LA COMPRA: $${totalCompra}
+    </p>`;
+
+    // alert(
+    //   "Tu carrito de compra se encuentra en la consola\n\nPLATOS PEDIDOS\nDESCUENTO\nTOTAL DEL PEDIDO"
+    // );
     console.log(
       "\nGRACIAS POR VISITARNOS: " + nombre + " " + apellido + " MESA: " + mesa
     );
