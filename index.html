@@ -23,13 +23,12 @@
   </head>
   <body>
     <!--HEADER-->
-    <header>
-      <div
-        class="container-fluid d-flex justify-content-center align-items-center"
-      >
-        <h1 id="titulo">PreEntrega 3 Roldan Lautaro 43103138</h1>
-        <hr />
-        <h3 id="secundario">Simulador de compras de restaurante online.</h3>
+    <header class="container-fluid shadow">
+      <div class="d-flex flex-column align-items-end">
+        <h1 id="titulo" class="fs-2">PreEntrega 3 Roldan Lautaro 43103138</h1>
+        <h3 id="secundario" class="fs-4">
+          Simulador de compras de restaurante online.
+        </h3>
       </div>
       <!--NAV-->
       <div>
@@ -52,23 +51,31 @@
     <!--MAIN-->
     <main>
       <!--SECTION-->
-      <section>
-        <div>
-          <p>Bienvenido al carrito de compras</p>
+      <section class="container-fluid mt-5 pb-5">
+        <div class="d-flex flex-column align-items-center">
+          <p>Bienvenido al carrito de compras!</p>
+          <button id="listado" class="widthBTN">
+            LISTA DE PLATOS POR CONSOLA
+          </button>
+          <span class="boxINNER border border-primary">
+            <!--BOX INNER TEXT-->
+          </span>
         </div>
-
-        <div>
-          <button id="listado">LISTA DE PLATOS POR CONSOLA</button>
+        <div class="d-flex flex-column align-items-center">
           <hr />
           <p>
             Recuerda que a partir de $10.000 recibis un descuento automatico del
             20%!!!
           </p>
-          <button id="comenzar">EMPEZAR CON LA COMPRA</button>
-
+          <button id="comenzar" class="widthBTN">EMPEZAR CON LA COMPRA</button>
+        </div>
+        <div class="d-flex flex-column align-items-center">
           <hr />
           <p>Finalización de la compra</p>
-          <button id="carrito">CARRITO POR CONSOLA</button>
+          <button id="carrito" class="widthBTN">CARRITO POR CONSOLA</button>
+          <span class="boxINNER border border-primary">
+            <!--BOX INNER TEXT-->
+          </span>
         </div>
       </section>
     </main>
