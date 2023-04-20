@@ -22,81 +22,76 @@
     <title>PreEntrega3 Roldan</title>
   </head>
   <body>
-    <!--HEADER-->
-    <header class="container-fluid shadow">
-      <div class="d-flex flex-column align-items-end">
-        <h1 id="titulo" class="fs-2">PreEntrega 3 Roldan Lautaro 43103138</h1>
-        <h3 id="secundario" class="fs-4">
-          Simulador de compras de restaurante online.
-        </h3>
-      </div>
-      <!--NAV-->
-      <div>
-        <nav class="navbar bg-body-tertiary">
-          <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img
-                src="./img/icon/logo.png"
-                alt="Logo"
-                width="30"
-                height="24"
-                class="d-inline-block align-text-top"
-              />
-              Acuchara Restaurant Soft
-            </a>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <!--MAIN-->
     <main>
-      <!--SECTION-->
-      <section class="container-fluid mt-5 pb-5">
-        <div class="d-flex flex-column align-items-center">
-          <p>Bienvenido al carrito de compras!</p>
-          <button id="listado" class="widthBTN">MOSTRAR LISTA DE PLATOS</button>
+      <section class="h-100 gradient-form">
+        <div class="container py-5 h-100">
           <div
-            class="boxINNER border border-primary d-flex align-items-center justify-content-center"
-            id="box1"
+            class="row d-flex justify-content-center align-items-center h-100"
           >
-            <!--BOX INNER HTML-->
-          </div>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-          <hr />
-          <p>
-            Recuerda que si ya compraste alguna vez y superas los $10.000, tenes
-            descuento del 30%!!!
-          </p>
-          <button id="comenzar" class="widthBTN">EMPEZAR CON LA COMPRA</button>
-        </div>
-        <div class="d-flex flex-column align-items-center">
-          <hr />
-          <p>Finalización de la compra</p>
-          <button id="carrito" class="widthBTN">CARRITO POR CONSOLA</button>
-          <div
-            class="boxINNER border border-primary d-flex align-items-center justify-content-center"
-            id="box2"
-          >
-            <!--BOX INNER HTML-->
+            <div class="col-xl-10">
+              <div class="card rounded-3 text-black">
+                <div class="row g-0 d-flex justify-content-center">
+                  <div class="col-lg-6">
+                    <div class="card-body p-md-5 mx-md-4">
+                      <div class="text-center">
+                        <img
+                          src="../img/icon/logo.png"
+                          style="width: 185px"
+                          alt="logo"
+                          class="img-fluid"
+                        />
+                        <h4 class="mt-1 mb-5 pb-1">Acuchara Restaurant Soft</h4>
+                      </div>
+
+                      <form id="form-login">
+                        <p>Ingrese los datos</p>
+
+                        <div class="form-outline mb-4">
+                          <input
+                            type="text"
+                            id="nombre"
+                            class="form-control"
+                            placeholder="Nombre"
+                            required
+                          />
+                        </div>
+
+                        <div class="form-outline mb-4">
+                          <input
+                            type="text"
+                            id="apellido"
+                            class="form-control"
+                            placeholder="Apellido"
+                            required
+                          />
+                        </div>
+
+                        <div>
+                          <label class="form-label" for="info"
+                            >! Esta por realizar un pedido en nuestra pagina web
+                            ¡</label
+                          >
+                        </div>
+
+                        <div class="text-center pt-1 mb-5 pb-1">
+                          <button
+                            class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3"
+                            type="submit"
+                            id="btnLOGIN"
+                          >
+                            ACCEDER
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <!--FOOTER-->
-    <footer>
-      <!-- <div>
-        <label for="producto">Ingrese lo que desea comer:</label>
-        <input type="text" id="producto" />
-        <button id="buscar">BUSCAR</button>
-      </div>
-
-      <div></div>
-
-      <div class="boxinfo">
-        
-      </div> -->
-    </footer>
     <!--JAVASCRIPT-->
     <script src="./js/main.js"></script>
   </body>
