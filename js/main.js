@@ -146,8 +146,8 @@ comenzar.addEventListener("click", () => {
   }
   console.log(compra);
   let descuento = mayorQue(10000);
-  descuento(totalcompra) == true &&
-  if (descuento(totalCompra) == true && ) {
+
+  if (descuento(totalCompra) == true) {
     totalCompra = totalCompra - totalCompra * 0.2;
   }
 });
