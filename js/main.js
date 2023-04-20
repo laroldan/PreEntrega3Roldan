@@ -47,6 +47,8 @@ function numMesa() {
 //VARIABLES
 
 let totalCompra = 0;
+let nombre;
+let apellido;
 let nuevo;
 let mesa = numMesa();
 
@@ -83,6 +85,8 @@ listado.addEventListener("click", () => {
 
 let comenzar = document.querySelector("#comenzar");
 comenzar.addEventListener("click", () => {
+  nombre = prompt("Ingrese su nombre: ");
+  apellido = prompt("Ingrese su apellido");
   totalCompra = 0;
 
   let prod = prompt("Diganos que desea comer:");
