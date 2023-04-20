@@ -2,10 +2,9 @@ const nombre = document.querySelector("#nombre"),
   apellido = document.querySelector("#apellido");
 
 class Usuario {
-  constructor(nombre, apellido, compra) {
+  constructor(nombre, apellido) {
     this.nombre = nombre;
     this.apellido = apellido;
-    this.compra = compra;
   }
 }
 
@@ -35,7 +34,7 @@ const acceso = document.querySelector("#form-login");
 acceso.addEventListener("submit", (e) => {
   e.preventDefault();
   if (foundUser == false) {
-    let newUser = new Usuario(nombre.value, apellido.value, "no");
+    let newUser = new Usuario(nombre.value, apellido.value);
     guardarUsuario(newUser);
     guardarEnStorage(usuarios);
     acceso.reset();

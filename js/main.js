@@ -13,6 +13,16 @@ const productos = [
 
 const compra = [];
 
+class Compra {
+  constructor(nombre, apellido, compro) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.compro = compro;
+  }
+}
+
+let compradores = JSON.parse(localStorage.getItem("compradores")) || [];
+
 //FUNCTIONS
 
 function mayorQue(n) {
@@ -37,8 +47,6 @@ function numMesa() {
 //VARIABLES
 
 let totalCompra = 0;
-let nombre;
-let apellido;
 let nuevo;
 let mesa = numMesa();
 
@@ -75,9 +83,6 @@ listado.addEventListener("click", () => {
 
 let comenzar = document.querySelector("#comenzar");
 comenzar.addEventListener("click", () => {
-  nombre = prompt("Ingrese su nombre:");
-  apellido = prompt("Ingrese su apellido");
-
   totalCompra = 0;
 
   let prod = prompt("Diganos que desea comer:");
@@ -147,9 +152,9 @@ comenzar.addEventListener("click", () => {
   console.log(compra);
   let descuento = mayorQue(10000);
 
-  if (descuento(totalCompra) == true) {
-    totalCompra = totalCompra - totalCompra * 0.2;
-  }
+  //operador AND
+  descuento(totalCompra) == true &&
+    (totalcompra = totalcompra - totalCompra * 0.3);
 });
 
 //CARRITO POR CONSOLA
@@ -181,5 +186,8 @@ carrito.addEventListener("click", () => {
     console.log(
       "\nGRACIAS POR VISITARNOS: " + nombre + " " + apellido + " MESA: " + mesa
     );
+
+    let newUser = new Compra(nombre.value, apellido.value, "si");
+    guardarEnStorage(compradores);
   }
 });
